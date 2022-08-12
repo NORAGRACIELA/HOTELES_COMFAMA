@@ -22,8 +22,8 @@ atenderpeticiones(){
 
 encenderServidor(){
     //DESPERTANDO EL SERVIDOR
-    this.app.listen(3000,function(){
-    console.log("servidor encedido")
+    this.app.listen(process.env.PORT,function(){
+    console.log("servidor encedido"+process.env.PORT)
 })
 
 }

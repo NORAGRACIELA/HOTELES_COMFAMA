@@ -1,7 +1,7 @@
-import expres from 'express'
+import express from 'express'
 
 //VARIABLE PARA PERSONALIZAR LAS RUTAS (ENDPOINTS) DE MIS SERVICIOS
-let rutas=express.Router()
+export let rutas=express.Router()
 
 
 //ESCRIBO MIS RUTAS (CADA RUTA ES UN SERVICIO)
