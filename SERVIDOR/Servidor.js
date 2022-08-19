@@ -6,6 +6,10 @@ import express from 'express'
 import{rutas} from '../routers/rutas.js'
 
 
+//LLAMAMOS AL METODO CONECTAR BASE DE DATOS
+import { conectar } from '../database/conexion.js'
+
+
 
 export class Servidor{
     constructor(){
@@ -27,13 +31,16 @@ habilitarBody(){
 }
 
 
-
 encenderServidor(){
     //DESPERTANDO EL SERVIDOR
     this.app.listen(process.env.PORT,function(){
     console.log("servidor encedido"+process.env.PORT)
 })
 
+}
+
+conectarconBd(){
+    conectar()
 }
 
 }

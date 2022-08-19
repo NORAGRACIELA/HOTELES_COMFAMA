@@ -18,7 +18,7 @@ rutas.get ('/viajescomfama/v1/habitacion/:id',controladorHabitacion.buscarHabita
 
 rutas.post ('/viajescomfama/v1/habitacion',controladorHabitacion.agregarHabitacion)
 
-rutas.put ('/viajescomfama/v1/habitacion',controladorHabitacion.editarHabitacion)
+rutas.put ('/viajescomfama/v1/habitacion/:id',controladorHabitacion.editarHabitacion)
 
 
 //ENDPOITS PARA LOS SERVICIOS ASOCIADOS  A LAS RESERVAS

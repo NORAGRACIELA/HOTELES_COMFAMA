@@ -43,7 +43,7 @@ export class  ControladorHabitacion{
         try{
             response.status(200).json({
                 mensaje:"exito agregando la habitacion",
-                datos:"NO HAY DATOS"+cuerpo
+                datos:cuerpo
             })
         }catch(error){//FALLO RESOLVIENDO LA PETICION
             response(400).json({
@@ -55,15 +55,22 @@ export class  ControladorHabitacion{
 
     //editar habitaciones
     editarHabitacion(request,response){
+        //recibir id como parametro 
+        let id=request.params.id
+
+
+        //recibir los datos con los que voy a editar (BODY)
+        let datos=request.body
+
         try{
             response.status(200).json({
-                mensaje:"exito en la consulta",
+                mensaje:"exito editando la habitacion"+ id,
                 datos:["habi1","200USD","TV POR CABLE"]
             })
         }catch(error){//FALLO RESOLVIENDO LA PETICION
             response(400).json({
                 mensaje:"FALLO  en la consulta" + error,
-                datos:null
+                datos:datos
             })
         }
     }
